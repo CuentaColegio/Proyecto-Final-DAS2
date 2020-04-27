@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="Proyecto.Controles_de_Usuario.Menu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Proyecto.Controles_de_Usuario"
+             xmlns:ViewModel="clr-namespace:Proyecto.VistaModelo"
+             mc:Ignorable="d" 
+             >
+
+    <Grid>
+
+        <Menu Grid.Row="0"
+              Grid.Column="0">
+            <Menu.Resources>
+                <Style x:Key="Simple" TargetType="{x:Type MenuItem}">
+                    <Setter Property = "Background" Value= "{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrush}}"/>
+                    <Setter Property = "Foreground" Value= "{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}"/>
+                    <Setter Property = "Height" Value= "{DynamicResource {x:Static SystemParameters.CaptionHeightKey}}"/>
+                </Style>
+            </Menu.Resources>
+
+            <MenuItem Header="Proyecto"  Style="{DynamicResource Simple}">
+                <MenuItem Header="Nuevo Proyecto"  Command="{Binding Incrementar}"/>
+                <MenuItem Header="Archivos de proyecto" >
+                    <MenuItem Header="Cargar archivo"/>
+                    <MenuItem Header="Cargar carpeta de archivo"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Raspar">
+                <MenuItem Header="Descargar htmls"/>
+
+            </MenuItem>
+
+        </Menu>
+    </Grid>
+</UserControl>
