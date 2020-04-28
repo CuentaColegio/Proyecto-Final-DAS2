@@ -41,6 +41,7 @@ namespace Proyecto.Modelo.Guardado
 
             return Htmls;
         }
+
         // Carga los archivos indicados por paths
         public static Dictionary<string, string> CargarDocsHtml(List<string> paths){
             Dictionary<string, string> Htmls = new Dictionary<string, string>();

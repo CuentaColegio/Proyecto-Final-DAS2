@@ -10,24 +10,24 @@
 
     <Grid>
 
-        <Menu Grid.Row="0"
-              Grid.Column="0">
+        <Menu>
             <Menu.Resources>
                 <Style x:Key="Simple" TargetType="{x:Type MenuItem}">
                     <Setter Property = "Background" Value= "{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrush}}"/>
                     <Setter Property = "Foreground" Value= "{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}"/>
                     <Setter Property = "Height" Value= "{DynamicResource {x:Static SystemParameters.CaptionHeightKey}}"/>
-                </Style>
+                    <Setter Property="FontSize" Value ="13"/>
+                </Style >
             </Menu.Resources>
 
-            <MenuItem Header="Proyecto"  Style="{DynamicResource Simple}">
+            <MenuItem Header="Proyecto" Style="{DynamicResource Simple}">
                 <MenuItem Header="Nuevo Proyecto"  Command="{Binding Incrementar}"/>
                 <MenuItem Header="Archivos de proyecto" >
                     <MenuItem Header="Cargar archivo"/>
-                    <MenuItem Header="Cargar carpeta de archivo"/>
+                    <MenuItem Header="Cargar carpeta de archivo" Command="{Binding CargarCarpeta}"/>
                 </MenuItem>
             </MenuItem>
-            <MenuItem Header="Raspar">
+            <MenuItem Header="Raspar" Style="{DynamicResource Simple}">
                 <MenuItem Header="Descargar htmls"/>
 
             </MenuItem>

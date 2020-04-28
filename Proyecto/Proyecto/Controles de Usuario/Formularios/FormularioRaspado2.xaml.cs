@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace Proyecto.Controles_de_Usuario.Formularios
 {
     /// <summary>
-    /// Lógica de interacción para CargarUnArchivoFormulario.xaml
+    /// Lógica de interacción para FormularioRaspado2.xaml
     /// </summary>
-    public partial class CargarUnArchivoFormulario : UserControl
+    public partial class FormularioRaspado2 : UserControl
     {
-        public CargarUnArchivoFormulario()
+        public FormularioRaspado2()
         {
             InitializeComponent();
-        }
-
-        private void Button_ImageFailed(object sender, ExceptionRoutedEventArgs e)
-        {
-
         }
     }
 }

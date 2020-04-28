@@ -77,6 +77,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controles de Usuario\Formularios\FormularioRaspado2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controles de Usuario\Menu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -109,6 +113,9 @@
     </Compile>
     <Compile Include="Controles de Usuario\Formularios\FormularioRaspado.xaml.cs">
       <DependentUpon>FormularioRaspado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles de Usuario\Formularios\FormularioRaspado2.xaml.cs">
+      <DependentUpon>FormularioRaspado2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controles de Usuario\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
