@@ -17,5 +17,14 @@ namespace Proyecto.VistaModelo
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+        // Cambio para UserControlDynamico
+        protected virtual void OnPropertyChanged(PropertyChangedEventArgs e)
+        {
+            var handler = this.PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, e);
+            }
+        }
     }
 }

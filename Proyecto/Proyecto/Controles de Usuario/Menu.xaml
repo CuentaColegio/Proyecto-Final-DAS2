@@ -22,14 +22,22 @@
 
             <MenuItem Header="Proyecto" Style="{DynamicResource Simple}">
                 <MenuItem Header="Nuevo Proyecto"  Command="{Binding Incrementar}"/>
+                <MenuItem Header="Abrir Proyecto"  Command="{Binding Incrementar}"/>
+                <Separator/>
                 <MenuItem Header="Archivos de proyecto" >
                     <MenuItem Header="Cargar archivo"/>
                     <MenuItem Header="Cargar carpeta de archivo" Command="{Binding CargarCarpeta}"/>
                 </MenuItem>
             </MenuItem>
+            
             <MenuItem Header="Raspar" Style="{DynamicResource Simple}">
                 <MenuItem Header="Descargar htmls"/>
+            </MenuItem>
 
+            <MenuItem Header="Ver" Style="{DynamicResource Simple}">
+                <MenuItem Header=""/>
+            </MenuItem>
+            <MenuItem Header="Prueba" Style="{DynamicResource Simple}" >
             </MenuItem>
 
         </Menu>

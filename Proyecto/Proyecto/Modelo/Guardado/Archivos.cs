@@ -55,6 +55,7 @@ namespace Proyecto.Modelo.Guardado
 
             return Htmls;
         }
+
         // Carga archivo de un path y devuelve string
         public static string CargarArchivo(string path)
         {

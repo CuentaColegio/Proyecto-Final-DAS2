@@ -1,9 +1,12 @@
-﻿using Proyecto.Servicios;
+﻿using Proyecto.Controles_de_Usuario;
+using Proyecto.Servicios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace Proyecto.VistaModelo
@@ -14,6 +17,7 @@ namespace Proyecto.VistaModelo
         private ICommand incrementar;
         private ICommand cargarCarpeta;
         private ICommand consultas;
+        private ICommand prueba;
         #endregion 
 
         public MainWindowsViewModel()
@@ -21,10 +25,27 @@ namespace Proyecto.VistaModelo
             incrementar = new CommandBase(param => this.DoIncrementar());
             cargarCarpeta = new CommandBase(param => this.cargarCarpetaFunc());
             consultas = new CommandBase(param => this.cargarCarpetaFunc());
-
+            prueba = new CommandBase(param => this.PruebaFunc());
         }
+        #region ViewLogics
+        //https://www.tutorialspoint.com/wpf/wpf_dependency_properties.htm
+        // https://stackoverflow.com/questions/11570754/binding-viewmodel-to-contentcontrol-as-its-datacontext
+        // https://www.codeproject.com/Questions/184774/Tab-control-in-C-code-behind
+        // http://csharphelper.com/blog/2014/09/load-a-treeview-control-from-an-xml-file-in-c/
 
-        #region Propiedades
+        #endregion
+
+        #region Comandos
+        public ICommand Prueba {
+            get
+            {
+                return prueba;
+            }
+            set
+            {
+                prueba = value;
+            }
+        }
         public ICommand Incrementar
         {
             get
@@ -67,10 +88,20 @@ namespace Proyecto.VistaModelo
         {
             Console.WriteLine("Buenaws");
         }
-        private void ConsultasFunc()
+
+
+        private void PruebaFunc()
         {
-            
+            TabItem item1 = new TabItem();
+            item1.Name = "tabIitemContent";
+            item1.Header = "Tab Item with Buttons";
+
+            TabControlApp tabControlApp = new TabControlApp();
+            tabControlApp.InsertarTabItem(item1);
+
         }
+
+        // Lanza función para 
         private void cargarCarpetaFunc()
         {
             string Path = VentanaFileDialogService.VentanaFileDialogLaunch();

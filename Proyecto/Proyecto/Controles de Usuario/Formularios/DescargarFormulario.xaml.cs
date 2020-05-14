@@ -13,23 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Proyecto.Controles_de_Usuario
+namespace Proyecto.Controles_de_Usuario.Formularios
 {
     /// <summary>
-    /// Lógica de interacción para TabControlApp.xaml
+    /// Lógica de interacción para DescargarFormulario.xaml
     /// </summary>
-    public partial class TabControlApp : UserControl
+    public partial class DescargarFormulario : UserControl
     {
-        public TabControlApp()
+        public DescargarFormulario()
         {
             InitializeComponent();
         }
-
-        public void InsertarTabItem(TabItem item) {
-           
-            TabControl.Items.Add(item);
-        }
-
-
     }
 }

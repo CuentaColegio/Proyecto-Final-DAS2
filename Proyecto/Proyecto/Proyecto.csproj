@@ -73,6 +73,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controles de Usuario\Formularios\DescargarFormulario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controles de Usuario\Formularios\FormularioRaspado.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -110,6 +114,9 @@
     </Compile>
     <Compile Include="Controles de Usuario\Formularios\CargarUnArchivoFormulario.xaml.cs">
       <DependentUpon>CargarUnArchivoFormulario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles de Usuario\Formularios\DescargarFormulario.xaml.cs">
+      <DependentUpon>DescargarFormulario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controles de Usuario\Formularios\FormularioRaspado.xaml.cs">
       <DependentUpon>FormularioRaspado.xaml</DependentUpon>

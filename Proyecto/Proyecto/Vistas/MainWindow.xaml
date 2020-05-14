@@ -8,10 +8,12 @@
         xmlns:local="clr-namespace:Proyecto"
         xmlns:ViewModel="clr-namespace:Proyecto.VistaModelo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" 
+        DataContext="MainWindowsViewModel">
     <Window.Resources>
         <ViewModel:MainWindowsViewModel x:Key="ViewModel" />
     </Window.Resources>
+
     <Grid  DataContext="{StaticResource ViewModel}">
 
         <Grid.ColumnDefinitions>
@@ -25,8 +27,9 @@
         <Grid x:Name="MenuApp" Grid.Row="0" Grid.Column="0">
             <cntrls:Menu Grid.Column="0" Grid.Row="0"/>
         </Grid>
+        
         <Grid x:Name="ContenidoApp"
-              Grid.Row="1" Grid.Column="0" >
+              Grid.Row="1" Grid.Column="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
@@ -36,8 +39,9 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <cntrls2:MenuLateralScraping Grid.Column="0" Grid.Row="0" />
-            <cntrls:TabControlApp Grid.Column="1" Grid.Row="0" MinHeight="200" MinWidth="450" Grid.ColumnSpan="2" Margin="5" x:Name="ControlTabApp"/>
-            
+            <!--<cntrls:TabControlApp Grid.Column="1" Grid.Row="0" MinHeight="200" MinWidth="450" Grid.ColumnSpan="2" Margin="5" x:Name="ControlTabApp"/>-->
+            <ContentControl DataContext="{Binding ConrtolTab}" x:Name="TabControlCC"/>
+
         </Grid>
     </Grid>
 </Window>
