@@ -1,6 +1,6 @@
 # Proyecto-Final-DAS2
 
-Proyecto final es una herramienta de Web scraping que guarda tus resultados en OrientDB, escrita dentro del marco .Net, c# y WPF. 
+Proyecto final es una herramienta de Web scraping que guarda tus resultados en una base de datos OrientDB. Escrita dentro del marco .Net, utilizando el lenguaje de programación c# y el marco de interfaz de usuario WPF. 
 
 ## Licencia
 Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
